@@ -26,7 +26,7 @@ class ListComparator implements Comparator<String> {
     @Override
     public int compare(String a, String b) {
         int aInt = Integer.parseInt(a);
-        int bInt = Integer.parseInt(b)
+        int bInt = Integer.parseInt(b);
         int aa = 5 * (int)(Math.pow(aInt,2)) + 3;
         int bb = 5 * (int)(Math.pow(bInt,2)) + 3;
         if (aa > bb) return 1;
