@@ -25,10 +25,18 @@ public class ListSorter {
 class ListComparator implements Comparator<String> {
     @Override
     public int compare(String a, String b) {
-        int aa = 5 * (int)(Math.pow(Integer.parseInt(a),2)) + 3;
-        int bb = 5 * (int)(Math.pow(Integer.parseInt(b),2)) + 3;
+        int aInt = Integer.parseInt(a);
+        int bInt = Integer.parseInt(b)
+        int aa = 5 * (int)(Math.pow(aInt,2)) + 3;
+        int bb = 5 * (int)(Math.pow(bInt,2)) + 3;
         if (aa > bb) return 1;
-        else if (aa == bb) return 0;
+        else if (aa == bb) {
+            if (aInt > bInt) {
+                return 1;
+            } else if (aInt == bInt) {
+                return 0;
+            }
+        }
         return -1;
     }
 }
