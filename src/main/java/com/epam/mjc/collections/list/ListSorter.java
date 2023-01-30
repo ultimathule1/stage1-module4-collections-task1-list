@@ -25,8 +25,8 @@ public class ListSorter {
 class ListComparator implements Comparator<String> {
     @Override
     public int compare(String a, String b) {
-        int aa = Integer.parseInt(a);
-        int bb = Integer.parseInt(b);
+        int aa = 5 * (int)(Math.pow(Integer.parseInt(a),2)) + 3;
+        int bb = 5 * (int)(Math.pow(Integer.parseInt(b),2)) + 3;
         if (aa > bb) return 1;
         else if (aa == bb) return 0;
         return -1;
